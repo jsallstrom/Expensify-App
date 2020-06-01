@@ -1,0 +1,35 @@
+// THIS IS WHERE WE DEFINE THE NORMALIZED RULES FOR MOST THINGS
+// like fonts, how normal button curser clicks work
+
+html {
+	// without this settings  1 rem = 16 pixels, which is hard to calculate how many rem you need for stuff
+	font-size: 62.25%;
+	// now 1 rem = 10 pixels, because we do this calculation first 16 *0.625 = 10
+}
+
+// the body is basicaly the background of the whole website, I never knew what the body of a website was...
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	// the way this works is that if the first font here in line isnt supported by a browser then the next one in line
+	// will be used until we find a font that works for all browsers, dont forget to import thsi in the main style.scss file
+	font-size: $medium-size; // variable $medium-size taken from _settings.scss
+	// most macs can use Helvetica, but in PC they might not support that but usually support Arial.
+}
+
+button {
+	cursor: pointer; // when you hover your curser over all normal button(not disabled) it will
+	// show a clickeble pointer cursor
+}
+
+button:disabled {
+	cursor: default; // when you hover your curser over a disabled button now, it will not be a
+	// pointer (indicating that you can click it) instead it will show a default arrow, like nothing happens when you hover
+}
+
+h1 {
+	font-size: 2.2rem; // with the new calculations this is 16 pixels* 0.625 * 2.2 = 10* 2.2 = 22 pixels
+}
+
+.is-active {
+	font-weight: bold;
+}

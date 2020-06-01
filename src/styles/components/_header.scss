@@ -1,0 +1,32 @@
+.header {
+	background: $off-black; // $off-black variable taken from _settings.scss in ./base
+	color: white;
+	margin-bottom: $medium-size;
+	padding: $medium-size 0;
+}
+
+// if there is a h1 inside of our .header now it will have these special stylings applied to it
+// BEM: block element modifier
+.header__title {
+	font-size: $large-size;
+	margin: 0;
+	color: red;
+}
+
+// a block is something big that you build and style big thigs on your website, such things as .header, .footer
+// .main_area etc.
+// an element is something that is smaller styled INSIDE a block, like an h1 title inside of the .header block
+// hence BEM: block element modifier: read more here http://getbem.com/naming/
+
+.header__subtitle {
+	color: $grey-white; // $grey-white variable taken from _settings.scss in ./base
+	font-size: $medium-size;
+	font-weight: 500; // remember that you do not need to break out everything
+	margin: 0;
+}
+
+@media (min-width: $desktop-breakpoint) {
+	.header {
+		margin-bottom: $xl-size;
+	}
+}

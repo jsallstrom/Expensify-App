@@ -1,0 +1,10 @@
+@import './base/settings';
+
+@import './base/_base.scss'; // you can also leave of the _ here and it will still work
+
+@import './components/header';
+
+// we're not gonna be having all our scss code in each individual component we re gonna import it here and then
+// this 
+// from smaller files in the folder base, OBS: all the smaller files usually by convention start with
+// _, like for example _base.scss
